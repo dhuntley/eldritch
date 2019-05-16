@@ -1,0 +1,71 @@
+html, body {
+    height: 100%;
+
+    #root {
+        height: 100%;
+    }
+}
+
+.eldritch-app {
+    height: 100%;
+    background-color: #23272b;
+}
+
+.button-panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    height: 100%;
+    justify-content: space-evenly;
+    padding: 5px;
+
+    button {
+        text-transform: uppercase;
+        flex: 1 0 calc(50% - 40px);
+        margin: 10px;
+        border-color: transparent !important;
+
+        &:hover {
+            border-color: transparent !important;
+        }
+
+        &:active {
+            border-color: transparent !important;
+        }
+    }
+}
+
+.card-container {
+    height: 100%;
+
+    .card-name-container {
+        height: 60%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .card-name {
+            font-weight: 700;
+            color: wheat;
+            font-size: 3rem;
+        }
+
+        .card-tag {
+            text-transform: uppercase;
+            margin: 20px;
+            color: darkkhaki;
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+    }
+
+    button {
+        width: 100%;
+        height: 40%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+}
