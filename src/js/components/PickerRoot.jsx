@@ -48,7 +48,7 @@ export default class PickerRoot extends Component {
 
     selectRandomCard = (type, keyword) => {
         const matchingCards = cards[type + "s"].filter((card) => {
-            return card[keyword];
+            return keyword ? card[keyword] : true;
         });
 
         return matchingCards[Math.floor(Math.random() * matchingCards.length)];
@@ -76,6 +76,7 @@ export default class PickerRoot extends Component {
     renderKeywordPicker = () => (
         <KeywordPicker
             keywords={this.getKeywords()}
+            showAny={this.state.criteria.type === "spell" || this.state.criteria.type === "artifact"}
             onChangeKeyword={this.handleChangeKeyword}
             onReset={this.handleReset}
         />

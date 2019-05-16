@@ -51,6 +51,12 @@ html, body {
             color: wheat;
             font-size: 3rem;
         }
+    }
+
+    .card-tag-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         .card-tag {
             text-transform: uppercase;

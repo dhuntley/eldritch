@@ -18,6 +18,11 @@ export default class KeywordPicker extends Component {
         return (
             <div className="button-panel">
                 {
+                    this.props.showAny ?
+                        <Button color="rgb(88, 88, 88)" className="btn btn-lg btn-dark" onClick={() => this.handleClick(null)}>Any</Button>
+                        : null
+                }
+                {
                     this.props.keywords.map((keyword) => (
                         <Button color="rgb(88, 88, 88)" className="btn btn-lg btn-dark" onClick={() => this.handleClick(keyword)}>{keyword}</Button>
                     ))
